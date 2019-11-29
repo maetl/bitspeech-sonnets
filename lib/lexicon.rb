@@ -3,6 +3,7 @@ require "phonetic"
 require "syllabize"
 require_relative "bitspeech"
 require_relative "word"
+require_relative "rhyme"
 
 class Lexicon
   def initialize
@@ -27,8 +28,34 @@ class Lexicon
     @words_index[@vocabulary.sample]
   end
 
-  def syllabic_pair_with(word)
-    @syllables_index[word].sample
+  def any_word_of_length(length)
+    @words_index[@syllables_index[length].sample]
+  end
+
+  def same_length_as(word)
+    @words_index[@syllables_index[word.syllables].sample]
+  end
+
+  def end_rhymes_for(word, count=1)
+    rhyme_list = []
+
+    @vocabulary.each do |candidate|
+      candidate_word = @words_index[candidate]
+      next if (word.syllables - candidate_word.syllables).abs > 1
+
+      if Rhyme.score(word.sounds, candidate_word.sounds) > 1
+        rhyme_list << candidate_word
+      end
+    end
+
+    rhyme_list.sample(count)
+  end
+
+  def word_frequencies
+    @syllables_index.keys.reduce({}) do |frequency, syllables|
+      frequency[syllables.to_s] = @syllables_index[syllables].size
+      frequency
+    end
   end
 
   def self.generate
