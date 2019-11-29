@@ -9,4 +9,6 @@ sonnet = Sonnet.new(lexicon)
 task :build do
   poem = sonnet.generate
   puts poem.to_text
+  puts
+  puts "#{poem.word_count} words"
 end

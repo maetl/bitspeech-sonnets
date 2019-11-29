@@ -6,6 +6,7 @@ class Stanza
   def word_count
     @lines.reduce(0) do |count, line|
       count += line.size
+      count
     end
   end
 
