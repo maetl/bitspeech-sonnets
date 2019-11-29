@@ -1,0 +1,16 @@
+GEM
+  specs:
+    calyx (0.17.1)
+    phonetic (1.2.0)
+    syllabize (0.8.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  calyx
+  phonetic
+  syllabize
+
+BUNDLED WITH
+   1.16.1
