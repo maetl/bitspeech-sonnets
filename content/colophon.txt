@@ -1,0 +1,10 @@
+Typefaces:
+Bagnard by Sebastien Sanfilippo, Love Letters
+Libre Baskerville by Impallari Type
+
+Tools:
+Ruby 2.6 (https://ruby-lang.org)
+Phonetic (https://rubygems.org/gems/phonetic)
+Syllabize (https://rubygems.org/gems/syllabize)
+Calyx (https://rubygems.org/gems/calyx)
+Prawn (https://github.com/prawnpdf/prawn)

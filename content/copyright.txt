@@ -1,0 +1,8 @@
+© Mark Rickerby, 2019
+
+This is a computer-generated book produced for NaNoGenMo 2019. The code is available under the terms of the MIT license.
+
+https://maetl.net
+https://maetl.itch.io/bitspeech-sonnets
+https://github.com/maetl/maetl/bitspeech-sonnets
+https://github.com/NaNoGenMo/2019

@@ -1,16 +1,29 @@
 GEM
+  remote: https://rubygems.org/
   specs:
-    calyx (0.17.1)
+    calyx (0.20.0)
+    concurrent-ruby (1.1.5)
+    i18n (1.7.0)
+      concurrent-ruby (~> 1.0)
+    numbers_and_words (0.11.6)
+      i18n
+    pdf-core (0.7.0)
     phonetic (1.2.0)
+    prawn (2.2.2)
+      pdf-core (~> 0.7.0)
+      ttfunk (~> 1.5)
     syllabize (0.8.0)
+    ttfunk (1.5.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   calyx
+  numbers_and_words
   phonetic
+  prawn
   syllabize
 
 BUNDLED WITH
-   1.16.1
+   2.0.2
