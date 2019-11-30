@@ -24,7 +24,7 @@ class Book
       rescue
         errors += 1
       end
-      break if words >= 1000
+      break if words >= 50_000
     end
 
     poems
