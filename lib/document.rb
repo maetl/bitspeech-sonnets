@@ -12,6 +12,7 @@ class Document
         normal: "fonts/LibreBaskerville-Regular.ttf"
       }
     )
+    @swatch = CoverSwatch.choose_combination
   end
 
   def render_standalone_page(title, content_path)
@@ -67,7 +68,6 @@ class Document
 
   def render_body(poems)
     start_new_page(margin: 72)
-    move_down 76
 
     poems.each do |poem|
       font("Bagnard") do
@@ -77,25 +77,26 @@ class Document
       font("Baskerville") do
         move_down 16
         text(poem.to_text)
-        move_down 16
+        move_down 36
       end
     end
   end
 
   def render_cover
     canvas do
-      fill_color "C7B935"
+      fill_color @swatch.background
       fill_rectangle [bounds.left, bounds.top], bounds.right, bounds.top
 
       font("Bagnard") do
         move_down 228
-        font_size(92) { text("The\nBitspeech\nSonnets", leading: -8, align: :center, color: "6C0B4E") }
+        font_size(92) { text("The\nBitspeech\nSonnets", leading: -8, align: :center, color: @swatch.text) }
         move_down 264
-        font_size(28) { text("A computer-generated book\nby Mark Rickerby", align: :center, color: "6C0B4E") }
+        font_size(28) { text("A computer-generated book\nby Mark Rickerby", align: :center, color: @swatch.text) }
       end
 
       move_cursor_to bounds.bottom
     end
+    fill_color "111111"
   end
 
   def overlay_page_numbers
