@@ -10,6 +10,14 @@ class Stanza
     end
   end
 
+  def first_line
+    @lines.first.map(&:capitalize).join(" ")
+  end
+
+  def end_rhymes
+    @lines.map { |l| l.last.capitalize }
+  end
+
   def to_text
     @lines.map do |line|
       line.join(" ").capitalize

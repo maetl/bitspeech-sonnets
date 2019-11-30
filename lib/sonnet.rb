@@ -10,7 +10,7 @@ class Sonnet
   end
 
   def generate
-    rhyme_scheme = RhymeScheme.new("ABBA ABBA CDEDCE")
+    rhyme_scheme = RhymeScheme.new("ABBA ABBA CDE DCE")
 
     end_rhymes = {}
 

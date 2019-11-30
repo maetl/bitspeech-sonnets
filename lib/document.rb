@@ -67,44 +67,55 @@ class Document
     end
   end
 
-  def render_body
+  def render_body(poems)
     start_new_page(margin: 72)
+    move_down 76
 
-    # @narrative.sections.each do |section|
-    #   font(pov_font(section.pov)) do
-    #     text(section.text)
-    #   end
-    #   font("Noto Serif") do
-    #     text("\n\n§\n\n", align: :center)
-    #   end
-    # end
+    poems.each do |poem|
+      font("Bagnard") do
+        font_size(16) { text(poem.title) }
+      end
+
+      font("Baskerville") do
+        move_down 16
+        text(poem.to_text)
+        move_down 16
+      end
+    end
   end
 
   def render_cover
     canvas do
-      fill_color "020300"
+      fill_color "C7B935"
       fill_rectangle [bounds.left, bounds.top], bounds.right, bounds.top
 
       font("Bagnard") do
         move_down 228
-        font_size(92) { text("The\nBitspeech\nSonnets", leading: -8, align: :center, color: "F9A8B1") }
+        font_size(92) { text("The\nBitspeech\nSonnets", leading: -8, align: :center, color: "6C0B4E") }
         move_down 264
-        font_size(28) { text("A computer-generated book\nby Mark Rickerby", align: :center, color: "F9A8B1") }
+        font_size(28) { text("A computer-generated book\nby Mark Rickerby", align: :center, color: "6C0B4E") }
       end
 
       move_cursor_to bounds.bottom
     end
   end
 
-  def render_sections
+  def overlay_page_numbers
+    font("Baskerville") do
+      number_pages("<page>", {start_count_at: 7, page_filter: ->pg{pg > 6} , align: :right, size: 10, at: [bounds.right - 50, 0]})
+    end
+  end
+
+  def render_sections(poems)
     render_cover
     render_half_title
     render_title
     render_copyright
     render_preface
-    # start_new_page
-    # render_body
-    # start_new_page
+    start_new_page
+    render_body(poems)
+    start_new_page
     render_colophon
+    overlay_page_numbers
   end
 end
