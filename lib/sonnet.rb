@@ -1,6 +1,3 @@
-require_relative "poem"
-require_relative "stanza"
-
 class Sonnet
   def initialize(lexicon)
     @lexicon = lexicon

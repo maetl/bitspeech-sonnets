@@ -1,10 +1,3 @@
-require "securerandom"
-require "phonetic"
-require "syllabize"
-require_relative "bitspeech"
-require_relative "word"
-require_relative "rhyme"
-
 class Lexicon
   def initialize
     @vocabulary = []

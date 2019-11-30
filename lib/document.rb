@@ -1,5 +1,3 @@
-require "prawn"
-
 class Document
   include Prawn::View
 
