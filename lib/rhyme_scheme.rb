@@ -1,4 +1,16 @@
 class RhymeScheme
+  PATTERNS = [
+    "ABBA ABBA CDE CDE",
+    "ABBA ABBA CDC DCD",
+    "ABBA CDDC EFG EFG",
+    "ABAB CDCD EFEF GG",
+    "ABAB BCBC CDCD EE"
+  ]
+
+  def self.choose_pattern
+    self.new(PATTERNS.sample)
+  end
+
   def initialize(pattern)
     @pattern = pattern
     @line_counts = pattern.gsub(" ", "").split("").reduce({}) do |rhymes,line|
