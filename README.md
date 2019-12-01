@@ -1,10 +1,12 @@
-# Bitspeech
+# The Bitspeech Sonnets
 
 This is a computer-generated book produced for [NaNoGenMo 2019](https://github.com/NaNoGenMo/2019).
 
 ## Details
 
 - [Entry on the NaNoGenMo 2019 repo](https://github.com/NaNoGenMo/2019/issues/128)
+- [Downloadable bundle of generated books](https://maetl.itch.io/bitspeech-sonnets)
+- [Notes about the project](https://maetl.net/notes/storyboard/the-bitspeech-sonnets)
 
 ## Summary
 
