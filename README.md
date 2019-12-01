@@ -25,7 +25,7 @@ bundle
 Run the `build` task using Rake to output a PDF. By default, it goes into the `output` directory.
 
 ```
-rake build
+rake generate
 ```
 
 ## License
