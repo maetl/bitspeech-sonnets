@@ -2,9 +2,31 @@
 
 This is a computer-generated book produced for [NaNoGenMo 2019](https://github.com/NaNoGenMo/2019).
 
+## Details
+
+- [Entry on the NaNoGenMo 2019 repo](https://github.com/NaNoGenMo/2019/issues/128)
+
 ## Summary
 
-When I get to it.
+The book is made using ‘Bitspeech’ which is a method for translating base 16 hex values into words by mapping the underlying input value into chunks of bits which map to lookup tables of vowels and consonants.
+
+Generating the book of sonnets starts with a lexicon of constructed Bitspeech words along with additional data on their syllable counts and phonetics. Each poem starts by randomly picking a list of end rhymes from the lexicon to match the sonnet rhyme scheme, then working backwards to fill out each line in the poem with the expected number of syllables.
+
+## Install
+
+Use Bundler to install the required Gems.
+
+```
+bundle
+```
+
+## Run
+
+Run the `build` task using Rake to output a PDF. By default, it goes into the `output` directory.
+
+```
+rake build
+```
 
 ## License
 
