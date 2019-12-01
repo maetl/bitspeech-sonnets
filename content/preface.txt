@@ -1,6 +1,6 @@
-‘Bitspeech’ is an asemic language where each word is constructed from a base 16 hex number with the underlying bits mapped onto a lookup table of consonant and vowel pairs. Different variations of Bitspeech can be formed by changing the available sets of consonants and vowels or changing the underlying bit mapping to use different sized lookup tables.
+‘Bitspeech’ is an asemic language where each word is constructed from a base 16 hex number with the underlying bits mapped onto a lookup table of consonant and vowel pairs. Different dialects of Bitspeech can be formed by changing the available sets of consonants and vowels or changing the underlying bit mapping to use different sized lookup tables.
 
-In the variation used in this book, each character in the hex translates to a byte, giving 16 possible positions for the set of consonants and the set of vowels.
+In the variation used for this book, each character in the hex translates to a byte, giving 16 possible positions for the set of consonants and the set of vowels.
 
 Consonants: p b t d k g ch j f v l r m y s z
 Vowels: a e i o u an en in un on a ei oi ui aw ow
